@@ -21,9 +21,8 @@ void PlaylistNode::SetNext(PlaylistNode* new_node){
 }
 
 void PlaylistNode::InsertAfter(PlaylistNode* new_node){
-    PlaylistNode* temp = this->nextNodePtr;
+    new_node->nextNodePtr = this->nextNodePtr;
     this->nextNodePtr = new_node;
-    new_node->nextNodePtr = temp;
 }
 
 void PlaylistNode::RemovePlaylistNode(string input_id){
